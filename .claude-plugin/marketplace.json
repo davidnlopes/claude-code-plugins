@@ -24,7 +24,7 @@
     },
     {
       "name": "ui-dev",
-      "version": "2.1.5",
+      "version": "2.1.6",
       "source": "./ui-dev",
       "description": "UI development toolkit with headless browser automation and shadcn/ui component documentation"
     },
