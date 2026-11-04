@@ -14,6 +14,6 @@ permissions: {}
 
 jobs:
   merge:
-    uses: dnlopes/Reusable.Workflows/.github/workflows/dependabot-merge.yaml@v1
+    uses: davidnlopes/Reusable.Workflows/.github/workflows/dependabot-merge.yaml@v1
     secrets:
       DEPENDABOT_MERGE_TOKEN: ${{ secrets.DEPENDABOT_MERGE_TOKEN }}
