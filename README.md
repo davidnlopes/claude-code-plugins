@@ -23,7 +23,7 @@ Install a plugin from this marketplace by pointing Claude Code at this repo's ma
 
 ```bash
 # Add this marketplace to Claude Code
-claude plugins marketplace add https://github.com/dnlopes/claude-code-plugins
+claude plugins marketplace add https://github.com/davidnlopes/claude-code-plugins
 ```
 
 Then install individual plugins:
