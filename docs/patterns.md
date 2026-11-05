@@ -56,7 +56,7 @@ Any skill copied from an external repository must be declared in `.github/vendor
 
 ### Conventional Commits
 
-All commit messages must follow the conventional commits format (`feat:`, `fix:`, `chore:`, `docs:`, etc.). The `pr-semantic.yaml` workflow blocks merges that don't comply. The commit type determines the semantic-release version bump: `feat` → minor, `fix` → patch, breaking change footer → major. Rationale: semantic-release reads commit history to determine the release version; non-conforming commits produce incorrect releases.
+All commit messages must follow the conventional commits format (`feat:`, `fix:`, `chore:`, `docs:`, etc.). The organisation-wide `Semantic PR` workflow blocks merges that don't comply. The commit type determines the semantic-release version bump: `feat` → minor, `fix` → patch, breaking change footer → major. Rationale: semantic-release reads commit history to determine the release version; non-conforming commits produce incorrect releases.
 
 ### No Build Step
 

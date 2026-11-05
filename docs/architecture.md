@@ -55,7 +55,7 @@ This repository is a plugin marketplace for Claude Code: a collection of indepen
 
 ### CI/CD Workflows
 **Lives in:** `.github/workflows/`
-**Owns:** The automated quality and release pipeline. Key workflows: `pr-semantic.yaml` (enforces conventional commits), `pr-trivy.yaml` (security scanning), `release.yaml` (semantic-release on push to `main`), `sync-vendored-skills.yaml` (upstream skill synchronization).
+**Owns:** The automated quality and release pipeline. Key workflows: the organisation-wide `Semantic PR` (enforces conventional commits) and `Trivy` (security scanning) workflows, `release.yaml` (semantic-release on push to `main`), `sync-vendored-skills.yaml` (upstream skill synchronization).
 **Interacts with:** The marketplace registry and plugin manifests — semantic-release is responsible for creating GitHub releases but does NOT automatically bump version numbers inside manifest files. Version bumps in manifests are a manual contributor responsibility.
 
 ### Vendored Skills Registry
