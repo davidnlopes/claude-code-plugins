@@ -3,7 +3,7 @@
 scope:
   paths:
     - .github/workflows/**
-    - renovate.json
+    - .github/dependabot.yml
   summary: "Build, test, and development workflow"
 last_updated: 2026-05-12T23:21:35Z
 ---
@@ -64,4 +64,4 @@ The `sync-vendored-skills.yaml` workflow fetches from upstream periodically and 
 
 ## Dependency Updates
 
-Renovate is configured to open automated PRs for dependency updates (e.g., GitHub Actions versions). Review and merge these PRs as part of routine maintenance.
+Dependabot opens monthly PRs for dependency updates (for example, GitHub Actions versions). Review and merge these PRs as part of routine maintenance.

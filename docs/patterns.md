@@ -24,7 +24,7 @@ claude-code-plugins/
 │   ├── agents/             # Agent definitions
 │   ├── commands/           # Slash command definitions
 │   └── scripts/            # Bash utility scripts (where applicable)
-└── renovate.json           # Automated dependency update config
+└── .github/dependabot.yml  # Automated dependency update config
 ```
 
 ## Naming Conventions
