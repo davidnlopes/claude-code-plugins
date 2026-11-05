@@ -9,7 +9,7 @@ updates:
     labels:
       - dependencies
     ignore:
-      - dependency-name: "dnlopes/Reusable.Workflows*"
+      - dependency-name: "davidnlopes/Reusable.Workflows*"
     groups:
       github-actions-non-major:
         update-types: [minor, patch]

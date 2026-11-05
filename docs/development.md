@@ -3,8 +3,7 @@
 scope:
   paths:
     - .github/workflows/**
-    - renovate.json
-    - trivy.yaml
+    - .github/dependabot.yml
   summary: "Build, test, and development workflow"
 last_updated: 2026-05-12T23:21:35Z
 ---
@@ -48,8 +47,8 @@ Releases are fully automated. On merge to `main`, `semantic-release` reads the c
 
 All PRs must pass:
 
-- **Conventional commit check** (`pr-semantic.yaml`) — enforces commit message format; determines release version.
-- **Security scan** (`pr-trivy.yaml`) — Trivy scans for known vulnerabilities in referenced content.
+- **Conventional commit check** (organisation-wide `Semantic PR` workflow) — enforces commit message format; determines release version.
+- **Security scan** (organisation-wide `Trivy` workflow) — Trivy scans for known vulnerabilities in referenced content.
 
 There is no automated test suite for manifest correctness or skill syntax. Structural validation is human-reviewed.
 
@@ -65,4 +64,4 @@ The `sync-vendored-skills.yaml` workflow fetches from upstream periodically and 
 
 ## Dependency Updates
 
-Renovate is configured to open automated PRs for dependency updates (e.g., GitHub Actions versions). Review and merge these PRs as part of routine maintenance.
+Dependabot opens monthly PRs for dependency updates (for example, GitHub Actions versions). Review and merge these PRs as part of routine maintenance.
