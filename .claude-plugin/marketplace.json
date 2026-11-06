@@ -36,7 +36,7 @@
     },
     {
       "name": "wordsmith",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "source": "./wordsmith",
       "description": "Guidance for how Claude writes documentation: technical documents, Claude rules, code comments, and AGENTS.md files"
     }

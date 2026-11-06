@@ -7,7 +7,7 @@ description: Use before creating or changing documentation, including READMEs, `
 
 Default to leaving documentation as it is. Change a document only when your work makes it false, or when future work needs a lasting fact that the document is the right home for. Finishing a feature is not a reason to document it.
 
-Instruction files are stricter. For `AGENTS.md`, `CLAUDE.md`, and files they import, use `wordsmith:writing-effective-agents-md`. For rule files, use `wordsmith:writing-effective-rules`.
+Instruction files and the root README are stricter. For `AGENTS.md`, `CLAUDE.md`, and files they import, use `wordsmith:writing-effective-agents-md`. For rule files, use `wordsmith:writing-effective-rules`. For a repository's root `README.md`, use `wordsmith:writing-effective-readme`.
 
 ## Choose where the knowledge belongs
 
