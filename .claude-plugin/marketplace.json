@@ -53,10 +53,10 @@
       "description": "Custom Claude Code status line showing context window usage, cost, and model"
     },
     {
-      "name": "voice",
-      "version": "1.0.2",
-      "source": "./voice",
-      "description": "Communication guidelines and style for how Claude writes and talks: code comments, documentation prose, and conversation with the user"
+      "name": "wordsmith",
+      "version": "2.0.0",
+      "source": "./wordsmith",
+      "description": "Guidance for how Claude writes documentation: technical documents, Claude rules, code comments, and AGENTS.md files"
     }
   ]
 }

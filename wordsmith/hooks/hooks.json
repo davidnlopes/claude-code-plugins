@@ -1,5 +1,5 @@
 {
-  "description": "Suggest loading the comment-discipline skill at session start",
+  "description": "Suggest loading the comment-discipline and document-discipline skills at session start",
   "hooks": {
     "SessionStart": [
       {
@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/suggest-comment-discipline.sh"
+            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/suggest-writing-skills.sh"
           }
         ]
       }
