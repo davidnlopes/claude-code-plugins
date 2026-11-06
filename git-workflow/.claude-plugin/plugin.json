@@ -1,8 +1,0 @@
-{
-    "name": "git-workflow",
-    "description": "Git and GitHub workflow commands for commits and pull requests",
-    "version": "3.0.3",
-    "author": {
-        "name": "David Lopes"
-    }
-}

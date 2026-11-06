@@ -1,8 +1,0 @@
-{
-    "name": "governor",
-    "description": "Project tenets management via user-invocable skills: bootstrap, manage, and verify architectural constraints in AGENTS.md",
-    "version": "4.0.0",
-    "author": {
-        "name": "David Lopes"
-    }
-}

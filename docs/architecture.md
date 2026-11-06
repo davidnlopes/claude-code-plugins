@@ -1,15 +1,3 @@
-<!--
----
-scope:
-  paths:
-    - .claude-plugin/**
-    - "*/.claude-plugin/**"
-    - .github/workflows/**
-  summary: "System architecture and component relationships"
-last_updated: 2026-05-12T23:21:35Z
----
--->
-
 # Architecture
 
 ## Overview
@@ -66,6 +54,5 @@ This repository is a plugin marketplace for Claude Code: a collection of indepen
 ## Invariants
 
 - A plugin's version in `<plugin>/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` must always be identical. There is no runtime enforcement — this is a contributor invariant.
-- The `curator` plugin is self-hosting: it provides the skills and agents used to generate and update this repository's own documentation. Modifications to `curator` affect future documentation generation runs.
 - Vendored skills are overwritten on every sync run. Local edits to vendored skill files will be silently lost.
 - No cross-plugin references are permitted. The modular distribution model depends on every plugin being independently installable.

@@ -5,18 +5,6 @@
   },
   "plugins": [
     {
-      "name": "git-workflow",
-      "version": "3.0.3",
-      "source": "./git-workflow",
-      "description": "Git and GitHub workflow commands for commits and pull requests"
-    },
-    {
-      "name": "curator",
-      "version": "5.1.0",
-      "source": "./curator",
-      "description": "Repository documentation for AI agents, with git-based staleness tracking"
-    },
-    {
       "name": "review-toolkit",
       "version": "4.0.1",
       "source": "./review-toolkit",
@@ -27,12 +15,6 @@
       "version": "2.1.5",
       "source": "./ui-dev",
       "description": "UI development toolkit with headless browser automation and shadcn/ui component documentation"
-    },
-    {
-      "name": "governor",
-      "version": "4.0.0",
-      "source": "./governor",
-      "description": "Project tenets management via user-invocable skills: bootstrap, manage, and verify architectural constraints in AGENTS.md"
     },
     {
       "name": "backend-dev",

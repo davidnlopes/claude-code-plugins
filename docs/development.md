@@ -1,14 +1,3 @@
-<!--
----
-scope:
-  paths:
-    - .github/workflows/**
-    - .github/dependabot.yml
-  summary: "Build, test, and development workflow"
-last_updated: 2026-05-12T23:21:35Z
----
--->
-
 # Development
 
 ## Prerequisites

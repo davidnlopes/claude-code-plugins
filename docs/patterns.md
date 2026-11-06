@@ -1,15 +1,3 @@
-<!--
----
-scope:
-  paths:
-    - "*/.claude-plugin/plugin.json"
-    - .claude-plugin/marketplace.json
-    - .github/vendored-skills.yaml
-  summary: "Plugin conventions and invariants"
-last_updated: 2026-05-12T23:21:35Z
----
--->
-
 # Patterns
 
 ## Project Structure
@@ -31,9 +19,9 @@ claude-code-plugins/
 
 | Type | Convention | Example |
 |------|------------|---------|
-| Plugin directories | `kebab-case`, matching the `name` field in `plugin.json` | `git-workflow`, `review-toolkit` |
-| Skill files | `SKILL.md` at the root of the skill directory | `curator/skills/onboarding-repository/SKILL.md` |
-| Agent files | Descriptive markdown filenames in `agents/` | `curator/agents/codebase-explorer.md` |
+| Plugin directories | `kebab-case`, matching the `name` field in `plugin.json` | `review-toolkit`, `status-line` |
+| Skill files | `SKILL.md` at the root of the skill directory | `wordsmith/skills/document-discipline/SKILL.md` |
+| Agent files | Descriptive markdown filenames in `agents/` | `review-toolkit/agents/security-auditor.md` |
 | Upstream marker files | `.upstream` alongside the vendored skill | `<plugin>/skills/<name>/.upstream` |
 
 ## Common Patterns
