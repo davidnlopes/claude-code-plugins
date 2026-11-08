@@ -41,9 +41,9 @@ Each kind of content below is optional, and a small project needs only a few. Us
 
 Describe the major areas, not every directory. Leave out version numbers, component inventories, and other volatile facts, unless the mental model depends on them.
 
-## State the invariants
+## State the invariants the project has
 
-Invariants are the few things that must stay true whatever the task. Most projects need about three to seven. For each one, write what must hold and why, in two to four sentences. A good invariant is:
+Invariants are the things that must stay true whatever the task. How many a project has depends entirely on the project: many have none worth stating, and some have ten. Record only the invariants that the code already follows or that the user names, and never add one to fill the section. If you find none, leave the section out. For each one, write what must hold and why, in two to four sentences. A good invariant is:
 
 - **Actionable:** it says that X must or must not do Y.
 - **Architectural:** it records a decision specific to this project, not a style that a linter can check.
@@ -118,6 +118,7 @@ Integrate each new instruction into the section where it belongs, and replace wh
 5. Check the draft:
    - [ ] A reader finishes with a mental model of the project, not a list of assorted facts.
    - [ ] Every invariant is grounded in the code or labelled as a goal, and the user approved it.
+   - [ ] No invariant was added only because the section expected one.
    - [ ] No instruction appears twice across the file, its imports, and rules.
    - [ ] Material for one area or an occasional task has moved to the home that loads it when needed.
 6. When you revise a file, summarise the meaningful changes.
