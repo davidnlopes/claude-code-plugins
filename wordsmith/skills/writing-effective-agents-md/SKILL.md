@@ -22,7 +22,9 @@ If your work makes an instruction false, or you find knowledge that might belong
 
 Keep a line only when it shapes how Claude approaches many different tasks in this project.
 
-Whether Claude could work the fact out from the code does not decide this. An accurate overview belongs here because it saves Claude from rebuilding the picture each session. A hidden fact that matters for one area or one task does not belong here, however useful it is. Move it to the home that fits, as "Move detail out of the file" describes.
+An overview of how the parts fit together belongs here even though Claude could rebuild it from the code, because rebuilding it costs every session. The details behind that overview do not. Leave out directory listings, command lists, dependency versions, and lists of current components, because Claude reads them from the code when a task needs them. A hidden fact that matters for one area or one task does not belong here either, however useful it is. Move it to the home that fits, as "Move detail out of the file" describes.
+
+Then ask whether an ordinary change, such as adding a service or bumping a version, would make the line false. If yes, state the pattern that all members follow instead of naming the members: "Each service under `services/` owns its own database", not "The billing, auth, and search services each own a database".
 
 Lines such as "Write clean code" change nothing, so delete them.
 
@@ -39,7 +41,7 @@ Each kind of content below is optional, and a small project needs only a few. Us
 | Design vocabulary | The terms the project reasons with | "Semantic functions are pure. Pragmatic functions wire them to I/O." |
 | Homes for work products | Where temporary and lasting knowledge go | "Keep plans in the gitignored `.plans/`. Merge lasting decisions into `docs/architecture/`." |
 
-Describe the major areas, not every directory. Leave out version numbers, component inventories, and other volatile facts, unless the mental model depends on them.
+Describe the major areas, not every directory.
 
 ## State the invariants the project has
 
@@ -71,7 +73,7 @@ A small project can stop at a few short sections:
 ```md
 # HomeLab
 
-This repository defines two Kubernetes clusters and the hosts around them, from the VM image to public ingress. One person runs it for personal use.
+This repository defines the Kubernetes clusters and the hosts around them, from the VM image to public ingress. One person runs it for personal use.
 
 ## How the layers fit together
 
@@ -117,6 +119,7 @@ Integrate each new instruction into the section where it belongs, and replace wh
 4. Write only the lines that pass the test in "Test every line".
 5. Check the draft:
    - [ ] A reader finishes with a mental model of the project, not a list of assorted facts.
+   - [ ] No line restates a count, version, or list of members that the code holds.
    - [ ] Every invariant is grounded in the code or labelled as a goal, and the user approved it.
    - [ ] No invariant was added only because the section expected one.
    - [ ] No instruction appears twice across the file, its imports, and rules.

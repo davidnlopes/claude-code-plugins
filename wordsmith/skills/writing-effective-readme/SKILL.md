@@ -61,11 +61,11 @@ The README describes the project as it is. Read the code, build files, and confi
 
 ## Keep it true next quarter
 
-Each fact in a README is a promise that someone must keep in sync. Prefer facts that change rarely.
+Each fact in a README is a promise that someone must keep in sync. Before you write a sentence, ask whether an ordinary change, such as adding a package or bumping a dependency, would make it false. Then ask whether a reader can learn it from the code or a command. If either answer is yes, point to the source instead of copying it.
 
-- Leave out version numbers, counts, and dates, unless the reader needs them to act.
-- Include an inventory, such as a list of packages or plugins, only when readers choose from it. Keep it complete, because a partial list reads as the whole list.
-- Prefer a link to the source of truth over a copy of it.
+- Leave out version numbers, counts, and dates, unless the reader needs them to act. Write "CI publishes an image for each service", not "CI publishes three images".
+- Leave out what the repository already lists, such as directory trees, dependency lists, configuration keys, and environment variables. Link the file that holds them.
+- Include an inventory, such as a list of packages or plugins, only when readers choose from it and no file in the repository serves them. Keep it complete, because a partial list reads as the whole list. Tell the user that every addition must update it.
 
 ## Update an existing README
 
@@ -84,4 +84,5 @@ Before you finish, confirm each of these:
 - [ ] Every document in the table is foundational, exists, and was found in the repository.
 - [ ] The README does not mention or link any agent instruction file.
 - [ ] Every command matches the repository, and you verified it or told the user that you could not.
+- [ ] No sentence goes false when someone adds a component or bumps a version.
 - [ ] The development section stays brief, and links to the developer guide when one exists.
