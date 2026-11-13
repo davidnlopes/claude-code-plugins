@@ -31,7 +31,7 @@ Then pick the home that fits. Write a rule only if none of these apply:
 
 Every rule conveys three things, with or without headings.
 
-**Instruction.** Open the file with it. State the target behaviour rather than only the banned one. Match the wording to the real strictness:
+**Instruction.** Open the file with it. State the target behaviour rather than only the banned one. Describe what it covers as a pattern, not a list of current members: "every handler under `src/api/`", not "the `users`, `orders`, and `billing` handlers". A list goes stale when someone adds a member, and the rule then stops covering the new one without anyone noticing. Match the wording to the real strictness:
 
 - For an invariant, use `must`, and give no exceptions.
 - For a default, say so and name the exceptions.
@@ -132,5 +132,6 @@ Split a rule when it covers more than one concern. Give the file a descriptive n
    - [ ] The rule covers one concern.
    - [ ] Its wording matches how strict the rule really is.
    - [ ] Every line changes what Claude does, compared with its default.
+   - [ ] No line restates a count, version, or list that a config file or the code holds.
    - [ ] Its scope loads the rule before Claude needs it, and not more often.
 6. Return only the Markdown for the rule file, unless the user asks for an explanation. When you revise a rule, also summarise the meaningful changes.

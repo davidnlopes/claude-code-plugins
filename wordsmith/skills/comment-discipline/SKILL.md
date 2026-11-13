@@ -32,7 +32,8 @@ When you are unsure, cut the comment. A reader sent to `git blame` now and then 
 
 - State the fact and its consequence, not the action the next line performs.
 - Keep it to one or two lines. Put longer rationale in the commit message or an existing document.
-- Name the specifics: the bug ID, the version, the incident, the measured number. Cite what happened, not a hypothetical.
+- Name the specifics: the bug ID, the version, the incident, the measured number. Cite what happened, not a hypothetical. These are external facts that the code cannot show.
+- Do not restate what the code holds, such as its values, defaults, or the current list of callers. The code changes, the comment does not, and the reader then trusts the wrong one.
 - Say it once, where a reader lands first, such as the shared module. Other instances get nothing, or at most a one-clause pointer.
 
 ## Compare near-miss pairs

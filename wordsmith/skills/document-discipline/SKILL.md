@@ -66,11 +66,29 @@ Integrated:
 
 If a fact has no natural place in the document, question whether it belongs there at all. Do not collect such facts in a closing note or a catch-all paragraph.
 
+## Write sentences that survive ordinary changes
+
+Before you write a sentence, ask two questions:
+
+1. **Would an ordinary change make it false?** Adding a component, bumping a version, or renaming a file must not break the document. Counts, version numbers, lists of current members, and file inventories fail this question.
+2. **Can a reader learn it from the code, config, or a command?** If yes, the code is the source of truth, and your copy only drifts from it.
+
+If either answer is yes, write the rule or reason that holds no matter how many members exist, and point to the file or command that lists them:
+
+| Fails | Survives |
+| --- | --- |
+| This project publishes two Docker images: `api` and `worker`. | CI publishes one image for each Dockerfile under `images/`. |
+| The service runs Postgres 15.4. | `docker-compose.yml` pins the Postgres version. |
+| Configure it with `PORT`, `LOG_LEVEL`, and `DB_URL`. | `config/defaults.yaml` lists every setting and its default. |
+
+Keep a number or a list only when the reader needs it to act and nothing in the repository states it, such as a measured limit from an incident.
+
 ## Check the result
 
 Before you finish, confirm each of these:
 
 - [ ] Every new document traces to a decision by the user.
 - [ ] Every added line is still needed after the work is finished.
+- [ ] No added line restates a count, version, or list that the code holds, or goes false when someone adds a member.
 - [ ] Every added fact sits in the section where it belongs, and nothing it supersedes remains.
 - [ ] Every instruction file that your work made false is reported to the user with a proposed edit.

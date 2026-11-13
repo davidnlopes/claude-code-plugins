@@ -1,7 +1,7 @@
 {
     "name": "wordsmith",
     "description": "Guidance for how Claude writes documentation: technical documents, Claude rules, code comments, and AGENTS.md files",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "author": {
         "name": "David Lopes"
     }
