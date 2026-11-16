@@ -1,7 +1,7 @@
 {
     "name": "ui-dev",
     "description": "UI development toolkit with headless browser automation and shadcn/ui component documentation",
-    "version": "2.1.5",
+    "version": "2.1.6",
     "author": {
         "name": "David Lopes"
     }
