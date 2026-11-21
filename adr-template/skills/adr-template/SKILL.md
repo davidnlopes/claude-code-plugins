@@ -1,5 +1,6 @@
 ---
 name: adr-template
+disable-model-invocation: true
 description: Use when the user wants to record an architecture decision, document a design choice, write an ADR, or capture why a significant technical choice was made.
 ---
 
@@ -8,6 +9,9 @@ description: Use when the user wants to record an architecture decision, documen
 ## Purpose
 Record a significant architectural, technology, or design decision. Creates a permanent,
 reviewable audit trail so a future engineer can understand — or reverse — the decision.
+
+## Consent rule
+You may propose an ADR when a decision warrants one. Never create or write an ADR unless the user explicitly asks for it or consents to your proposal.
 
 ## When to write an ADR
 - Introducing a new dependency or framework
