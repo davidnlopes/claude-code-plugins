@@ -39,6 +39,12 @@
       "version": "2.1.2",
       "source": "./wordsmith",
       "description": "Guidance for how Claude writes documentation: technical documents, Claude rules, code comments, and AGENTS.md files"
+    },
+    {
+      "name": "adr-template",
+      "version": "0.1.0",
+      "source": "./adr-template",
+      "description": "Record architecture decisions in a consistent ADR format with context, options, consequences, and compliance notes"
     }
   ]
 }

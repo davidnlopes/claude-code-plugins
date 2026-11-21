@@ -29,6 +29,7 @@ claude plugins install review-toolkit
 | `ui-dev` | UI development toolkit with headless browser automation and shadcn/ui |
 | `backend-dev` | Backend development toolkit with database and API best practices |
 | `status-line` | Custom Claude Code status line showing context window usage, cost, and model |
+| `adr-template` | Record architecture decisions in a consistent ADR format |
 
 ## Documentation
 
