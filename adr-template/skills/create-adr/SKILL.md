@@ -25,6 +25,9 @@ You may propose an ADR when a decision warrants one. Never create or write an AD
 NNN = three-digit sequence, starting from 001.
 
 ## Template
+Status, Date, Context, and Decision are required. Sections marked "(optional)" are not.
+Include an optional section only when it adds real information for this decision.
+Omit it entirely rather than filling it with placeholders or "N/A".
 
 ```markdown
 # ADR-NNN: [Short title]
@@ -43,17 +46,17 @@ What forces are at play? What is the problem being solved?]
 [What was decided? State it clearly and positively.
 "We will use X" not "We considered X".]
 
-## Options considered
+## Options considered (optional)
 | Option | Pros | Cons |
 |--------|------|------|
 | ...    | ...  | ...  |
 
-## Consequences
+## Consequences (optional)
 [What are the expected outcomes — positive and negative?
 What does this make easier? What does it make harder?
 Any follow-up actions or tickets created?]
 
-## Compliance notes
+## Compliance notes (optional)
 [Any compliance or regulatory considerations relevant to this decision.]
 ```
 
