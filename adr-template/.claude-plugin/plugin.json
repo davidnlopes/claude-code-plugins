@@ -1,0 +1,8 @@
+{
+    "name": "adr-template",
+    "description": "Record architecture decisions in a consistent ADR format with context, options, consequences, and compliance notes. Vendored from https://github.com/hmcts/agentic-plugins-marketplace (MIT)",
+    "version": "0.1.0",
+    "author": {
+        "name": "David Lopes"
+    }
+}
