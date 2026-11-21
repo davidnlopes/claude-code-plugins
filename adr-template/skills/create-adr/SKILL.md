@@ -1,10 +1,10 @@
 ---
-name: adr-template
+name: create-adr
 disable-model-invocation: true
 description: Use when the user wants to record an architecture decision, document a design choice, write an ADR, or capture why a significant technical choice was made.
 ---
 
-# ADR Template (Architecture Decision Record)
+# Create ADR (Architecture Decision Record)
 
 ## Purpose
 Record a significant architectural, technology, or design decision. Creates a permanent,
