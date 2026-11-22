@@ -42,7 +42,7 @@
     },
     {
       "name": "adr-template",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "source": "./adr-template",
       "description": "Record architecture decisions in a consistent ADR format with context, options, consequences, and compliance notes"
     }
