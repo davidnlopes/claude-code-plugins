@@ -11,9 +11,16 @@ Record a significant architectural, technology, or design decision. Creates a pe
 reviewable audit trail so a future engineer can understand — or reverse — the decision.
 
 ## Consent rule
-You may propose an ADR when a decision warrants one. Never create or write an ADR unless the user explicitly asks for it or consents to your proposal.
+You may propose an ADR when a decision warrants one. After you propose, stop and wait for the user to say yes to that proposal.
 
-## When to write an ADR
+Create, amend, or supersede an ADR only after an explicit yes, or when the user asks for the ADR directly. These are not consent:
+- Silence, or a reply on another topic
+- Approval of something other than the ADR proposal
+- An earlier general go-ahead, such as "go end to end" or "do what you have to do"
+
+Without consent, do not write or change any ADR file. You may mention in your output that the decision could be recorded as an ADR.
+
+## When to propose an ADR
 - Introducing a new dependency or framework
 - Choosing between two viable architectural patterns
 - Deviating from an existing tech stack or coding standard
@@ -61,7 +68,7 @@ Any follow-up actions or tickets created?]
 ```
 
 ## Process
-1. Draft the ADR before implementing the decision
+1. After the user consents, draft the ADR before implementing the decision
 2. Commit it to the feature branch alongside the code it describes
 3. Reference the ADR number in the PR description
 4. If the decision is significant, surface it for review before merge
