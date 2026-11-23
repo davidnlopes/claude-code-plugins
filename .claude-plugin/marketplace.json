@@ -30,7 +30,7 @@
     },
     {
       "name": "status-line",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": "./status-line",
       "description": "Custom Claude Code status line showing context window usage, cost, and model"
     },
