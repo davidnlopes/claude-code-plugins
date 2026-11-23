@@ -1,38 +1,35 @@
 # claude-code-plugins
 
-A personal marketplace of Claude Code plugins — self-contained bundles of skills, agents, and slash commands that extend Claude Code's capabilities for AI-assisted development workflows.
+A Claude Code plugin marketplace. It publishes plugins that add skills, agents, and slash commands to Claude Code for code review, documentation, UI and backend development, project management, and architecture decision records.
 
-## Summary
+The repository holds both the plugin sources and the marketplace registry, `.claude-plugin/marketplace.json`. Each plugin is a directory at the repository root and installs on its own.
 
-This repository is both the plugin source and the marketplace registry it publishes from. Each plugin is an independently versioned, self-contained unit that Claude Code can install directly. Plugins extend Claude Code with purpose-built workflows for git, code review, documentation, UI development, backend development, and architectural governance.
+## Install a plugin
 
-## Installation
+To add the marketplace, run this in Claude Code:
 
-Install a plugin from this marketplace by pointing Claude Code at this repo's marketplace registry:
-
-```bash
-# Add this marketplace to Claude Code
-claude plugins marketplace add https://github.com/davidnlopes/claude-code-plugins
+```text
+/plugin marketplace add davidnlopes/claude-code-plugins
 ```
 
-Then install individual plugins:
+Then install any plugin from it:
 
-```bash
-claude plugins install review-toolkit
+```text
+/plugin install review-toolkit@dnlopes
 ```
 
-## Available Plugins
+## Plugins
 
-| Plugin | Description |
-|--------|-------------|
-| `review-toolkit` | Multi-agent code review toolkit with specialized reviewers |
-| `ui-dev` | UI development toolkit with headless browser automation and shadcn/ui |
-| `backend-dev` | Backend development toolkit with database and API best practices |
-| `status-line` | Custom Claude Code status line showing context window usage, cost, and model |
-| `adr-template` | Record architecture decisions in a consistent ADR format |
+| Plugin | What it adds |
+| --- | --- |
+| [`review-toolkit`](review-toolkit) | A multi-agent pull request review with reviewers for bugs, security, quality, contracts, tests, and history |
+| [`ui-dev`](ui-dev) | Skills for browser automation, shadcn/ui, React, web design, and Hugo |
+| [`backend-dev`](backend-dev) | Postgres best practices |
+| [`quartermaster`](quartermaster) | Skills that turn plans into tickets and move issues through triage |
+| [`status-line`](status-line) | A status line showing context window usage, cost, and model |
+| [`wordsmith`](wordsmith) | Skills for writing documentation, READMEs, `AGENTS.md` files, rules, and code comments |
+| [`adr-template`](adr-template) | A skill that records architecture decisions in a consistent format |
 
-## Documentation
+## Contribute
 
-- [Architecture](docs/architecture.md) — System design and component relationships
-- [Patterns](docs/patterns.md) — Plugin conventions and invariants
-- [Development](docs/development.md) — Contributing and release workflow
+Each plugin directory holds its own `.claude-plugin/plugin.json` and its skills, agents, or commands. To add a plugin, create the directory and register it in `.claude-plugin/marketplace.json`. Use [Conventional Commits](https://www.conventionalcommits.org/) for commit and pull request titles, because the release workflow reads them.
