@@ -18,6 +18,30 @@ FILLED_CHAR = "█"
 EMPTY_CHAR = "░"
 
 
+def format_tokens(count: float) -> str:
+    if count >= 999_500:
+        return f"{count / 1_000_000:.1f}".removesuffix(".0") + "M"
+    if count >= 1_000:
+        return f"{count / 1_000:.0f}k"
+    return f"{count:.0f}"
+
+
+def context_tokens(ctx: dict):
+    tokens = ctx.get("total_input_tokens")
+    if tokens is None:
+        usage = ctx.get("current_usage")
+        if usage:
+            tokens = sum(
+                usage.get(key) or 0
+                for key in (
+                    "input_tokens",
+                    "cache_creation_input_tokens",
+                    "cache_read_input_tokens",
+                )
+            )
+    return tokens
+
+
 def context_segment(data: dict) -> str:
     ctx = data.get("context_window") or {}
     used = ctx.get("used_percentage")
@@ -43,7 +67,12 @@ def context_segment(data: dict) -> str:
 
     filled = round(used / 100 * BAR_WIDTH)
     bar = FILLED_CHAR * filled + EMPTY_CHAR * (BAR_WIDTH - filled)
-    return f"🧠 {color}[{bar}] {used:.0f}%{RESET}"
+    detail = ""
+    tokens = context_tokens(ctx)
+    size = ctx.get("context_window_size")
+    if tokens is not None and size:
+        detail = f" {format_tokens(tokens)}/{format_tokens(size)}"
+    return f"🧠 {color}[{bar}] {used:.0f}%{detail}{RESET}"
 
 
 def cost_segment(data: dict) -> str:
