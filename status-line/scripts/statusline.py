@@ -2,6 +2,7 @@
 """Renders the Claude Code status line from the JSON payload on stdin."""
 
 import json
+import subprocess
 import sys
 
 RESET = "\033[0m"
@@ -16,6 +17,8 @@ SEP = f"{DIM} │ {RESET}"
 BAR_WIDTH = 10
 FILLED_CHAR = "█"
 EMPTY_CHAR = "░"
+
+GIT_TIMEOUT_SECONDS = 1
 
 
 def format_tokens(count: float) -> str:
@@ -109,6 +112,34 @@ def model_segment(data: dict) -> str:
     return f"{BOLD}{name}{RESET}"
 
 
+def run_git(directory: str, *args: str):
+    try:
+        result = subprocess.run(
+            ["git", "-C", directory, *args],
+            capture_output=True,
+            text=True,
+            timeout=GIT_TIMEOUT_SECONDS,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if result.returncode != 0:
+        return None
+    return result.stdout.strip() or None
+
+
+def git_branch_segment(data: dict) -> str:
+    workspace = data.get("workspace") or {}
+    directory = workspace.get("current_dir") or data.get("cwd")
+    if not directory:
+        return None
+    branch = run_git(directory, "branch", "--show-current")
+    if not branch:
+        branch = run_git(directory, "rev-parse", "--short", "HEAD")
+    if not branch:
+        return None
+    return f"🌿 {branch}"
+
+
 def main():
     try:
         data = json.load(sys.stdin)
@@ -117,7 +148,13 @@ def main():
 
     segments = [
         fn(data)
-        for fn in (model_segment, context_segment, cost_segment, duration_segment)
+        for fn in (
+            model_segment,
+            git_branch_segment,
+            context_segment,
+            cost_segment,
+            duration_segment,
+        )
     ]
     print(SEP.join(s for s in segments if s))
 
